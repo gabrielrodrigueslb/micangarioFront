@@ -2,10 +2,10 @@ import Header from '@/components/Header/Header';
 import Navbar from '@/components/Navbar/Navbar';
 import CategoryItem from '@/components/CategoryItem/CategoryItem';
 import ProductCard from '@/components/ProductCard/ProductCard';
-import { ProductProps } from '@/types/ProductProps';
+import { ProductType } from '@/types/ProductType';
 
 export default function Home() {
-  const produtos: ProductProps[] = [
+  const produtos: ProductType[] = [
     {
       src: '/product6.png',
       alt: 'Produto 6',
@@ -57,9 +57,9 @@ export default function Home() {
   ];
   return (
     <>
-      <main className="main-background container m-auto w-full h-full p-[20px] pb-[84px] max-w-[1440px]">
+      <main className="main-background container m-auto w-full h-full pb-[5.25rem] max-w-[1440px] p-5">
         <Header />
-        <aside className="promocional-banner py-[27px] overflow-hidden">
+        <aside className="promocional-banner pt-[1.5rem] pb-5 overflow-hidden">
           <img
             className="w-full"
             src={'/banner.png'}
@@ -68,12 +68,14 @@ export default function Home() {
         </aside>
         <Navbar />
 
-        <section className="categories pb-5">
+        <section className="categories pb-6">
           <div className="categories-header ">
             <h2 className="text-lg font-semibold opacity-80">Categorias</h2>
           </div>
-          <div className="category-list-container ml-[-20px] mr-[-20px]">
-            <ul className="flex gap-5 pt-2.5 overflow-x-auto px-5">
+          <div className="category-list-container ml-[-1.25rem] mr-[-1.25rem]">
+            <ul className="flex gap-5 pt-2.5 overflow-x-auto px-5 [&::-webkit-scrollbar]:hidden 
+            [-ms-overflow-style:'none'] 
+            [scrollbar-width:'none']">
               <CategoryItem
                 src="/product1.png"
                 alt="Produto 1"
@@ -100,17 +102,14 @@ export default function Home() {
         </section>
 
         <section className="Products m-auto">
-          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 min-[28.125rem]:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
             {produtos.map((produto, index) => (
               <ProductCard
-                key={index}
-                src={produto.src}
-                alt={produto.alt}
-                name={produto.name}
-                price={produto.price}
+              key={index}
+                product={produto}
               />
             ))}
-          </ul>
+          </div>
         </section>
       </main>
     </>
