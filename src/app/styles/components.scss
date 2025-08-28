@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+.title{
+@apply text-lg font-semibold opacity-80
+}
+
+.circle-btn{
+    @apply cart-button inline-block p-[12px] text-2xl border-[2.8] rounded-[50px] border-(--border-color) text-(--text-color) cursor-pointer hover:bg-(--button-color) hover:text-(--text-hover-color) hover:opacity-100 opacity-70 transition delay-[5]
+}

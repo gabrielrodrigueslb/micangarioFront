@@ -16,7 +16,7 @@ export default function ProductImage({ product, fill }: ProductImageProps) {
       fill
       alt={product.alt}
       className={`object-cover rounded-[10px] ${
-        loading ? 'animate-pulse scale-110 grayscale' : 'scale-100 grayscale-0'
+        loading ? 'animate-pulse' : 'scale-100 grayscale-0'
       }`}
       onLoadingComplete={() => setLoading(false)}
     />
