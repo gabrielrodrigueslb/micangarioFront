@@ -13,6 +13,11 @@
   --box-shadow: -13px -1px 14.8px -4px rgba(0, 0, 0, 25%);
 }
 
+.title{
+@apply text-lg font-semibold opacity-80
+}
+
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--text-color);

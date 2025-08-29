@@ -16,7 +16,7 @@ export default function ReturnButton() {
   return (
     <button
       onClick={handleBack}
-      className="cart-button inline-block p-[12px] text-2xl border-[2.8] rounded-[50px] border-(--border-color) text-(--text-color) cursor-pointer bg-(--color-background)"
+      className="cart-button inline-block p-[8px] text-2xl border-[2.8] rounded-[50px] border-(--border-color) text-(--text-color) cursor-pointer bg-(--color-background)"
     >
       <IoIosArrowBack className="opacity-70" />
     </button>

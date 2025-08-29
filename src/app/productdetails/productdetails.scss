@@ -1,0 +1,19 @@
+.detail-section {
+  position: relative;
+
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background: var(--color-background);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -8;
+    border-radius: 10px 10px 0 0;
+  }
+}
+.selected{
+    border: solid 4px var(--primary-color) ;
+}

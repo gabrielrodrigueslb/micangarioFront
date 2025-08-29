@@ -27,7 +27,7 @@ export default function ProductImage({ product, fill }: ProductImageProps) {
       height={169}
       alt={product.alt}
       className={`object-cover rounded-[10px] ${
-        loading ? 'scale-110 grayscale' : 'scale-100 grayscale-0'
+        loading ? 'animate-pulse' : 'scale-100 grayscale-0'
       }`}
       onLoadingComplete={() => setLoading(false)}
     />
